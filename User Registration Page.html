@@ -61,18 +61,17 @@
       <input type="tel" id="phone" name="phone" placeholder="+0161123456789" required>
       <label for="password">Create Password</label>
       <input type="password" id="password" name="password" minlength="8" placeholder="At least 8 characters" required>
-      <button type="submit">Register</button>
+		<button type="submit">
+			
+				<br>
+				<small><a href="Ride Request Dashboard.html" style="color: #fff; text-decoration: underline;">Register</a></small>
+		</button>
+
     </form>
     <div class="link">
       <p>If you already registered please log in here: <a href="index.html">Login here</a></p>
     </div>
   </div>
 
-  <script>
-    document.getElementById('registrationForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      window.location.href = 'https://damien83mancheste.github.io/SHUber/Ride%20Request%20Dashboard.html';
-    });
-  </script>
 </body>
 </html>
