@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #000;
+      color: white;
+      border: none;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .link {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .link a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Create an Account</h2>
+    <form action="/register" method="POST">
+      <p style="color: #666; font-size: 14px;">Notification: Your location will be used for pickup by default.</p>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Damian Mandziuk" required>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="dmandziuk@clrchs.co.uk" required>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+0161123456789" required>
+      <label for="password">Create Password</label>
+      <input type="password" id="password" name="password" minlength="8" placeholder="At least 8 characters" required>
+      <button type="submit">Register</button>
+    </form>
+    <div class="link">
+      <p>If you allready register user please log here? <a href="Login  Signup Page.html">Login here</a></p>
+    </div>
+  </div>
+</body>
+</html>

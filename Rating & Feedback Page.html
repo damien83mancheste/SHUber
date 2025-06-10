@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rating & Feedback</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 480px; margin: auto; background: #fefefe; }
+    h2 { color: #444; }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .button {
+      padding: 12px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      background-color: #673AB7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .button.back {
+      background-color: #9E9E9E;
+    }
+  </style>
+</head>
+<body>
+  <h2>Rate Your Ride</h2>
+  <div style="background-color:#f1f1f1; padding:10px; border-radius:8px; margin-bottom:15px;">
+    <p><strong>Trip Summary:</strong></p>
+    <p>From: 1 Rochdale Road</p>
+    <p>To: 1 Trent Bridge Walk</p>
+    <p>Total Cost: £20.00</p>
+    <p style="color:green;"> A copy of this summary has been emialed to your email.</p>
+  </div>
+  <label for="rating">Rating (1 to 5):</label><br>
+  <input type="number" min="1" max="5" id="rating" style="width: 100%; padding: 10px;"><br><br>
+
+  <label for="feedback">Feedback:</label><br>
+  <textarea id="feedback" placeholder="How did you enjoy ride with SHUber?"></textarea>
+
+  <div style="text-align: center;">
+    <a href="Trip History Page.html" class="button">Submit & View History</a>
+    <a href="Ride In Progress Page.html" class="button back">Back</a>
+  </div>
+</body>
+</html>

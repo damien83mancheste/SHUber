@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ride Request Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      padding: 20px; 
+      max-width: 480px; 
+      margin: auto; 
+      background: #f9f9f9; 
+    }
+    h1 { color: #333; }
+    button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+    }
+    .nav-link {
+      display: block;
+      margin-top: 15px;
+      text-align: center;
+      color: #007BFF;
+      text-decoration: underline;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Request Your Ride</h1>
+  <p>Set your pickup and destination:</p>
+
+  <label for="pickup">Pickup Location</label>
+  <input type="text" id="pickup" name="pickup" placeholder="Leave blank for current location" style="width: 100%; padding: 10px;"><br><br>
+
+  <label for="destination">Drop-off Location</label>
+  <input type="text" id="destination" name="destination" placeholder="Enter destination" required style="width: 100%; padding: 10px;"><br><br>
+
+  <div style="text-align:center; margin-top: 20px;">
+    <button onclick="handleConfirmRide()">Confirm Ride</button>
+  </div>
+
+  <!-- Navigation Links -->
+  <a href="Help and Support Page.html" class="nav-link">Help & Support</a>
+  <a href="Payment Method Page.html" class="nav-link">Payment Methods</a>
+  <a href="Settings page.html" class="nav-link">Settings</a>
+
+  <script>
+    function handleConfirmRide() {
+      const destination = document.getElementById('destination').value.trim();
+      if (!destination) {
+        alert('Please enter a drop-off location.');
+        return;
+      }
+
+      // Simulate driver availability randomly (50% chance)
+      const driverFound = Math.random() < 0.5;
+
+      if (driverFound) {
+        window.location.href = 'Ride Confirmation Page.html';
+      } else {
+        window.location.href = 'No Driver Found  Retry Page.html';
+      }
+    }
+  </script>
+</body>
+</html>
